@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  //This is a comment from Patrick.
   return (
     <div className="App">
       <header className="App-header">
