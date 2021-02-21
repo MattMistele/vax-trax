@@ -45,7 +45,7 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link to='/survey' className='nav-links' onClick={closeMobileMenu}>
-                                Survey 
+                                Survey Info
                             </Link>
                         </li>
                     </ul>

@@ -9,7 +9,6 @@ function Home (){
         <>
             <VaccineSection />
             <Form />
-            <Cards />
         </>
     )
 };
