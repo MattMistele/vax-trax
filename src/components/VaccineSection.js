@@ -11,7 +11,7 @@ function VaccineSection() {
             <div className="vaccine-btns">
                 <Button className='btns' buttonStyle='btn--outline'
                 buttonSize='btn--large'>
-                    GET STARTED
+                    NOT SURE IF NEEDED
                 </Button>
             </div>
         </div>
