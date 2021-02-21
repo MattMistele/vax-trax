@@ -17,9 +17,9 @@ function App() {
         event.preventDefault();
         setSubmitting(true);
 
-        setTimeout(() => {
+        /*setTimeout(() => {
             setSubmitting(false);
-        }, 3000)
+        }, 3000)*/
     }
 
     const handleChange = event => {
@@ -168,7 +168,7 @@ function App() {
                     </label>
                     <label>
                         <p>Age</p>
-                        <input class = "enter_value" name="Age" onChange={handleChange} />
+                        <input class="enter_value" name="Age" onChange={handleChange} />
                     </label>
                     <label>
                         <p>Are you a healthcare worker? (ex. emergency medical services, nurses, pharmacists, administrative staff)</p>
@@ -196,15 +196,56 @@ function App() {
                         </select>
                     </label>
                     <label>
+                        <p>Are you affected by any of the below conditions?</p>
+                        <div class="condition_list">
+                            <ul>
+                                <li>Cancer</li>
+                                <li>Chronic Kidney Disease (stage 4 or above)</li>
+                                <li>Chronic Pulmonary Disease</li>
+                                <li>Down Syndrome</li>
+                                <li>Immunocompromised State from Organ Transplant</li>
+                                <li>Pregnancy</li>
+                                <li>Sickle Cell Disease</li>
+                                <li>Heart Conditions (heart failure, coronary artery disease or cardiomyopathies; excludes hypertension)</li>
+                                <li>Severe Obesity</li>
+                                <li>Type 2 Diabetes Mellitus</li>
+                                <li>Other developmental or high-risk disabilities that put an individual at especially high risk </li>
+                            </ul>
+                        </div>
+                        <select class="choose_option" name="LongtermCare" onChange={handleChange}>
+                            <option value="">--Please choose an option--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>Do you want to be contacted through email or by phone?</p>
+                        <select class="choose_option" name="ContactMethod" onChange={handleChange}>
+                            <option value="">--Please choose an option--</option>
+                            <option value="Email">Email</option>
+                            <option value="Phone">Phone</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>Please enter your contact information: </p>
+                        <input class="enter_value" name="ContactInfo" onChange={handleChange} />
+                    </label>
+                    {/*<label>
                         <p>Count</p>
                         <input type="number" name="count" onChange={handleChange} step="1" />
                     </label>
                     <label>
                         <p>Gift Wrap</p>
                         <input type="checkbox" name="gift-wrap" onChange={handleChange} />
-                    </label>
+                    </label>*/}
                     <p></p>
                     <button class="submit_button" type="submit">Submit</button>
+                    {submitting &&
+                        <div>
+                            <p style={{color:"red", marginTop: "0px"}}>Thank you for submitting! Please watch out for a verification email/text/phone call.</p>
+                        <p></p>
+                        </div>
+                    }
                 </fieldset>
             </form>
         </div>
