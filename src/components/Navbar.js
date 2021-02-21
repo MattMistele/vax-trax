@@ -29,7 +29,7 @@ function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        VAX TRAX <i className='fab fa-typo3'/>
+                        VAX TRAX <i className='VaxTrax'/>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i class="fas fa-bars"></i>
