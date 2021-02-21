@@ -11,8 +11,8 @@ function Cards() {
                     <ul className="cards__item">
                         <CardItem 
                         src="images/img-9.jpg"
-                        text="Sample Text"
-                        label='Hello'
+                        text="Take a Survey"
+                        label='Click Me'
                         path='/survey'/>
                     </ul>
                 </div>
