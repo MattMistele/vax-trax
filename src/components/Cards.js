@@ -5,12 +5,12 @@ import './Cards.css'
 function Cards() {
     return (
         <div className='cards'>
-            <h1>Sample Text</h1>
+            <h1>Survey Forum</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
-                    <ul className="cards__item">
+                    <ul className="cards__items">
                         <CardItem 
-                        src="images/img-9.jpg"
+                        src="./components/img-9.jpg"
                         text="Take a Survey"
                         label='Click Me'
                         path='/survey'/>

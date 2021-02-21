@@ -45,13 +45,7 @@ function Navbar() {
                                 Survey 
                             </Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                                Test Button
-                            </Link>
-                        </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>TEST</Button>}
                 </div>
             </nav>
         </>
