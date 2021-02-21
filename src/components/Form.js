@@ -21,7 +21,7 @@ function App() {
             setSubmitting(false);
         }, 3000)*/
     }
-
+    
     const handleChange = event => {
         const isCheckbox = event.target.type === 'checkbox';
         setFormData({
@@ -40,12 +40,12 @@ function App() {
             </h2>
             {submitting &&
                 <div>
-                    You are submitting the following:
+                    {/*You are submitting the following:
                     <ul>
                         {Object.entries(formData).map(([name, value]) => (
                             <li key={name}><strong>{name}</strong>:{value.toString()}</li>
                         ))}
-                    </ul>
+                        </ul>*/}
                 </div>
             }
             <form onSubmit={handleSubmit}>
@@ -187,12 +187,21 @@ function App() {
                         </select>
                     </label>
                     <label>
-                        <p>What's your current occupation?</p>
+                        <p>What industry do you currently work in? (if unsure, check table 2 here: <a href="https://www.cdc.gov/vaccines/covid-19/categories-essential-workers.html">Essential Worker Categories</a>)</p>
                         <select class="choose_option" name="Occupation" onChange={handleChange}>
                             <option value="">--Please choose an option--</option>
-                            <option value="N/A">N/A</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
+                            <option value="Chemical">Chemical</option>
+                            <option value="Commercial">Commercial Facilities</option>
+                            <option value="CriticalManufacturing">Critical Manufacturing</option>
+                            <option value="Education">Education</option>
+                            <option value="Energy">Energy</option>
+                            <option value="EssentialGov">Other Community- or Government-based Operations and Essential Functions</option>
+                            <option value="FoodAgriculture">Food and Agriculture</option>
+                            <option value="Healthcare">Healthcare/Public Health</option>
+                            <option value="PublicService">Law Enforcement, Public Safety, and Other First Responders</option>
+                            <option value="Residential">Residential/Shelter Facilities, Housing and Real Estate, and Related Services</option>
+                            <option value="Transport">Transportation and Logistics</option>
+                            <option value="None">None of the above</option>
                         </select>
                     </label>
                     <label>
@@ -219,11 +228,12 @@ function App() {
                         </select>
                     </label>
                     <label>
-                        <p>Do you want to be contacted through email or by phone?</p>
+                        <p>Do you want to be contacted through email, text, or phone call?</p>
                         <select class="choose_option" name="ContactMethod" onChange={handleChange}>
                             <option value="">--Please choose an option--</option>
                             <option value="Email">Email</option>
-                            <option value="Phone">Phone</option>
+                            <option value="Text">Text</option>
+                            <option value="Call">Phone Call</option>
                         </select>
                     </label>
                     <label>
